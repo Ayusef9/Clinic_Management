@@ -1,5 +1,5 @@
 import {Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn} from 'typeorm';
-import { Doctor } from '../../doctors/entities/doctor-entity.js';
+import type { Doctor } from '../../doctors/entities/doctor-entity.js';
 
 @Entity('departments')
 export class Department {
@@ -12,7 +12,7 @@ export class Department {
   @Column({ type: 'text', nullable: true })
   description: string | null;
 
- @OneToMany(() => Doctor, (doctor) => doctor.department)
+ @OneToMany('Doctor', 'department')
   doctors: Doctor[];
 
   @CreateDateColumn({name: 'created_at'})

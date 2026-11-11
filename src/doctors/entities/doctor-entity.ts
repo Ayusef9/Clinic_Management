@@ -1,5 +1,6 @@
-import {Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn} from 'typeorm';
-import { Department } from '../../departments/entities/department-entity.js';
+import {Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn} from 'typeorm';
+import type { Department } from '../../departments/entities/department-entity.js';
+import type { Appointment } from '../../appointments/entities/appointment-entity.js';
 
 
 @Entity('doctors')
@@ -30,12 +31,15 @@ export class Doctor {
   @Column({ name: 'is_active', type: 'boolean', default: true })
   isActive: boolean;
 
-  @ManyToOne(() => Department, (department) => department.doctors, {
+  @ManyToOne('Department', 'doctors', {
     nullable: false,
-    onDelete: 'RESTRICT',})
-
+    onDelete: 'RESTRICT',
+  })
   @JoinColumn({ name: 'department_id' })
   department: Department;
+
+  @OneToMany('Appointment', 'doctor')
+  appointments: Appointment[];
 
   @CreateDateColumn({name: 'created_at'})
     createdAt: Date;

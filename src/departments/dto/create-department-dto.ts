@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsString, MaxLength } from 'class-validator';
+
+import { IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
 
 export class CreateDepartmentDto {
   @IsNotEmpty({ message: 'Nama departemen tidak boleh kosong' })
@@ -6,6 +7,7 @@ export class CreateDepartmentDto {
   @MaxLength(100, { message: 'Nama departemen maksimal 100 karakter' })
   readonly name: string;
 
+  @IsOptional()
   @IsString({ message: 'Deskripsi harus berupa teks' })
   @MaxLength(1000, { message: 'Deskripsi maksimal 1000 karakter' })
   readonly description?: string;
