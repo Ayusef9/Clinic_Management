@@ -1,132 +1,151 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Project setup
-
-```bash
-$ npm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Observability
-
-In production applications, observability is essential for understanding how your system behaves, detecting issues early, and maintaining reliable performance.
-
-[NestJS Observe](https://observe.nestjs.com) automatically instruments your NestJS application, giving you deep visibility into your system with minimal setup:
-
-- **Distributed tracing:** Follow requests across services and understand how they flow through your system.
-- **Waterfall analysis:** Visualize request execution and identify slow operations, bottlenecks, and unexpected delays.
-- **Performance analysis:** Analyze application performance in real time and quickly pinpoint areas that need optimization.
-- **Metrics:** Track key application and infrastructure metrics to understand system health and performance trends.
-- **Logging:** Centralize and correlate logs with traces and other telemetry to make debugging easier.
-- **Error tracking:** Detect errors quickly and investigate their root causes with the surrounding context.
-- **SLA monitoring:** Track service-level objectives and identify when your application is approaching or exceeding defined thresholds.
-- **Alarms and alerts:** Set up alerts for critical errors, performance degradation, SLA violations, and other anomalies so your team can react quickly.
-
-To add it to this project, run this and approve the code it prints at [observe.nestjs.com/link](https://observe.nestjs.com/link) - signing up for free if you have no account:
-
-```bash
-$ npx @nestjs/observe link
-```
-
-It installs `@nestjs/observe`, wires it into `AppModule` and `main.ts`, and writes the app key and secret into `.env`, which every `nest start` script (`start`, `start:dev`, `start:debug`) then loads. In production, set `OBSERVE_APP_KEY` and `OBSERVE_APP_SECRET` in the environment instead.
-
-Or do it by hand:
-
-```bash
-$ npm install @nestjs/observe
-```
-
-Then follow the [setup guide](https://docs.nestjs.com/observability/sdk) - it takes a single import and an app key.
-
-The free plan needs no payment details and covers 300,000 events a month. You can also browse the [live demo](https://www.observe-demo.nestjs.com/dashboard) first - the whole dashboard over a busy service's data, with nothing to install.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Auto-instrument your application with [NestJS Observe](https://observe.nestjs.com). Distributed tracing, metrics, and logging made easy. Error tracking and performance monitoring for your NestJS applications.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Clinic Management Backend
+Backend aplikasi administrasi klinik yang dibangun menggunakan NestJS, TypeScript, TypeORM, dan PostgreSQL. Aplikasi ini digunakan untuk mengelola data pasien, dokter, departemen, janji temu, serta rekam kunjungan pasien.
+1. Fitur Utama
+Aplikasi ini memiliki lima modul utama:
+1. Patients
+Mengelola informasi pasien, meliputi:
+Menambahkan data pasien.
+Menampilkan seluruh data pasien.
+Menampilkan detail pasien berdasarkan ID.
+Memperbarui data pasien.
+Menghapus data pasien (soft delete).
+2. Doctors
+Mengelola informasi dokter, meliputi:
+Menambahkan data dokter.
+Menampilkan seluruh data dokter.
+Menampilkan detail dokter berdasarkan ID.
+Memperbarui data dokter.
+Menghapus data dokter (soft delete).
+Mengatur status aktif dokter.
+Menghubungkan dokter dengan departemen.
+3. Departments
+Mengelola departemen atau bagian layanan klinik, meliputi:
+Menambahkan departemen.
+Menampilkan seluruh departemen.
+Menampilkan detail departemen.
+Memperbarui informasi departemen.
+Menghapus departemen (soft delete).
+Menampilkan dokter berdasarkan departemen.
+4. Appointments
+Mengelola janji temu pasien dengan dokter, meliputi:
+Membuat janji temu.
+Menampilkan seluruh janji temu.
+Menampilkan detail janji temu.
+Memperbarui informasi janji temu.
+Mengubah status janji temu.
+Menghapus janji temu (soft delete).
+Status janji temu:
+pending – Menunggu konfirmasi.
+confirmed – Janji temu telah dikonfirmasi.
+completed – Kunjungan telah selesai.
+cancelled – Janji temu dibatalkan.
+5. Medical Records
+Mengelola catatan kunjungan pasien, meliputi:
+Menambahkan rekam kunjungan.
+Menampilkan seluruh rekam kunjungan.
+Menampilkan detail rekam kunjungan.
+Memperbarui rekam kunjungan.
+Menghapus rekam kunjungan.
+Rekam kunjungan berisi:
+Tanggal kunjungan.
+Keluhan pasien.
+Hasil pemeriksaan.
+Catatan kunjungan.
+2. Teknologi yang Digunakan
+TeknologiKeteranganNode.jsJavaScript RuntimeNestJSBackend FrameworkTypeScriptBahasa pemrogramanTypeORMObject Relational MapperPostgreSQLDatabaseclass-validatorValidasi dataclass-transformerTransformasi data@nestjs/configPengelolaan konfigurasiREST APIKomunikasi client dan server
+3. Struktur Project
+clinic_management/├── src/│   ├── patients/│   │   ├── dto/│   │   ├── entities/│   │   ├── patients.controller.ts│   │   ├── patients.module.ts│   │   └── patients.service.ts│   ││   ├── doctors/│   │   ├── dto/│   │   ├── entities/│   │   ├── doctors.controller.ts│   │   ├── doctors.module.ts│   │   └── doctors.service.ts│   ││   ├── departments/│   │   ├── dto/│   │   ├── entities/│   │   ├── departments.controller.ts│   │   ├── departments.module.ts│   │   └── departments.service.ts│   ││   ├── appointments/│   │   ├── dto/│   │   ├── entities/│   │   ├── appointments.controller.ts│   │   ├── appointments.module.ts│   │   └── appointments.service.ts│   ││   ├── medical_records/│   │   ├── dto/│   │   ├── entities/│   │   ├── medical_records.controller.ts│   │   ├── medical_records.module.ts│   │   └── medical_records.service.ts│   ││   ├── interceptors/│   │   └── transform-response/│   ││   ├── app.controller.ts│   ├── app.module.ts│   ├── app.service.ts│   └── main.ts│├── test/├── .env├── package.json├── tsconfig.json└── README.md
+4. Relasi Database
+Relasi antarentitas yang digunakan:
+Departments – Doctors: One-to-Many. Satu departemen dapat memiliki banyak dokter.
+Patients – Appointments: One-to-Many. Satu pasien dapat memiliki banyak janji temu.
+Doctors – Appointments: One-to-Many. Satu dokter dapat menangani banyak janji temu.
+Appointments – Medical Records: One-to-One. Satu janji temu dapat memiliki maksimal satu rekam kunjungan.
+5. Instalasi
+Persyaratan
+Pastikan perangkat sudah memiliki:
+Node.js dan npm.
+PostgreSQL.
+Git (opsional).
+Postman untuk pengujian API.
+Clone Repository
+git clone <repository-url>cd clinic_management
+Install Dependencies
+npm install
+Install Dependencies Tambahan
+npm install @nestjs/config pg
+6. Konfigurasi Environment
+Buat file .env pada direktori utama project.
+PORT=3000NODE_ENV=developmentDB_HOST=localhostDB_PORT=5435DB_USERNAME=rootDB_PASSWORD=secretDB_DATABASE=clinic_db
+Sesuaikan konfigurasi database dengan PostgreSQL yang digunakan.
+Buat database dengan nama:
+CREATE DATABASE clinic_db;
+7. Menjalankan Aplikasi
+Development Mode
+npm run start:dev
+Build Project
+npm run build
+Production Mode
+npm run start:prod
+Jika aplikasi berhasil dijalankan, backend dapat diakses melalui:
+http://localhost:3000
+8. API Endpoints
+Base URL:
+http://localhost:3000
+Patients
+MethodEndpointKeteranganPOST/patientsMenambahkan pasienGET/patientsMenampilkan semua pasienGET/patients/Detail pasienPATCH/patients/Memperbarui pasienDELETE/patients/Menghapus pasien
+Doctors
+MethodEndpointKeteranganPOST/doctorsMenambahkan dokterGET/doctorsMenampilkan semua dokterGET/doctors/Detail dokterPATCH/doctors/Memperbarui dokterDELETE/doctors/Menghapus dokter
+Departments
+MethodEndpointKeteranganPOST/departmentsMenambahkan departemenGET/departmentsMenampilkan semua departemenGET/departments/Detail departemenPATCH/departments/Memperbarui departemenDELETE/departments/Menghapus departemen
+Appointments
+MethodEndpointKeteranganPOST/appointmentsMembuat janji temuGET/appointmentsMenampilkan semua janji temuGET/appointments/Detail janji temuPATCH/appointments/Memperbarui janji temuPATCH/appointments//statusMengubah statusDELETE/appointments/Menghapus janji temu
+Medical Records
+MethodEndpointKeteranganPOST/medical-recordsMenambahkan rekam kunjunganGET/medical-recordsMenampilkan semua rekam kunjunganGET/medical-records/Detail rekam kunjunganPATCH/medical-records/Memperbarui rekam kunjunganDELETE/medical-records/Menghapus rekam kunjungan
+9. Contoh Request API
+Menambahkan Pasien
+POST /patients
+{  "fullName": "Andi Pratama",  "dateOfBirth": "2002-05-12",  "gender": "male",  "address": "Semarang",  "phone": "081234567890",  "email": "andi@example.com"}
+Menambahkan Departemen
+POST /departments
+{  "name": "Poli Umum",  "description": "Pelayanan kesehatan umum"}
+Menambahkan Dokter
+POST /doctors
+{  "fullName": "dr. Budi Santoso",  "specialization": "Dokter Umum",  "email": "budi@example.com",  "phone": "081234567891",  "licenseNumber": "SIP123456",  "departmentId": "UUID-DEPARTEMEN"}
+Membuat Janji Temu
+POST /appointments
+{  "patientId": "UUID-PASIEN",  "doctorId": "UUID-DOKTER",  "appointmentDate": "2026-12-15T09:00:00",  "reason": "Pemeriksaan rutin"}
+Mengubah Status Janji Temu
+PATCH /appointments/:id/status
+{  "status": "confirmed"}
+Menambahkan Rekam Kunjungan
+POST /medical-records
+{  "appointmentId": "UUID-JANJI-TEMU",  "visitDate": "2026-12-15T09:00:00",  "complaint": "Demam dan batuk",  "examination": "Pemeriksaan umum",  "notes": "Catatan kunjungan pasien"}
+10. Validasi dan Penanganan Error
+Aplikasi menggunakan ValidationPipe dari NestJS dengan konfigurasi:
+whitelist: Menghapus properti yang tidak memiliki decorator validasi.
+forbidNonWhitelisted: Menolak request yang memiliki properti tidak dikenal.
+transform: Mengubah data request sesuai tipe DTO.
+Pesan validasi menggunakan bahasa Indonesia.
+Penanganan error menggunakan HTTP Exception dari NestJS, seperti:
+Status CodeKeterangan200Permintaan berhasil201Data berhasil dibuat400Data atau permintaan tidak valid404Data tidak ditemukan409Terjadi konflik data500Kesalahan server
+11. Aturan Bisnis
+Beberapa aturan bisnis yang diterapkan:
+Setiap dokter harus terhubung dengan satu departemen.
+Setiap janji temu harus memiliki pasien dan dokter yang valid.
+Janji temu hanya dapat dibuat dengan dokter yang aktif.
+Tanggal janji temu harus lebih dari waktu sekarang.
+Janji temu yang sudah selesai atau dibatalkan tidak dapat diubah kembali melalui endpoint perubahan status.
+Satu janji temu hanya dapat memiliki satu rekam kunjungan.
+Janji temu yang dibatalkan tidak dapat memiliki rekam kunjungan.
+Ketika rekam kunjungan dibuat, status janji temu otomatis berubah menjadi completed.
+Data pasien, dokter, departemen, dan janji temu menggunakan mekanisme soft delete.
+Data rekam kunjungan tidak menggunakan soft delete.
+12. Catatan
+Data pasien yang digunakan untuk pengujian merupakan data fiktif.
+Aplikasi berfokus pada administrasi klinik.
+Aplikasi tidak mencakup diagnosis klinis, resep elektronik, maupun integrasi layanan medis.
+Konfigurasi synchronize hanya digunakan untuk pengembangan. Untuk production, gunakan migration TypeORM.
+Pastikan database PostgreSQL sudah berjalan sebelum menjalankan aplikasi.
+Clinic Management Backend
+Built with NestJS, TypeScript, TypeORM, and PostgreSQL.
