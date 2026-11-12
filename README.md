@@ -176,11 +176,11 @@ Buat file `.env` pada direktori utama project.
 PORT=3000
 NODE_ENV=development
 
-DB_HOST=localhost
-DB_PORT=5435
-DB_USERNAME=root
-DB_PASSWORD=secret
-DB_DATABASE=clinic_db
+DB_HOST=
+DB_PORT=
+DB_USERNAME=
+DB_PASSWORD=
+DB_DATABASE=
 ```
 
 Sesuaikan konfigurasi database dengan PostgreSQL yang digunakan.
